@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Meteor</title>
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/default.css" id="theme">
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="http://marketmesuite.github.io/3D-CORNER-RIBBONS/css/3d-corner-ribbons.css">
+	<style type="text/css">
+		.banner { z-index: 100 }
+		.banner .text { text-align: center; font-family: Lato, sans-serif;}
+
+		.ribbon .banner::after,
+		.ribbon .banner::before {
+			background-color: #6d1b06
+		}
+		.ribbon .text::before,
+		.ribbon .text::after,
+		.no-css-transforms .ribbon .text {
+			background-color: #a52808
+		}
+
+		pre { position: relative; }
+	</style>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("[data-ribbon]").each(function(i, element) {
+				var ribbonText = $(element).data().ribbon
+				var ribbonStyle = $(element).data().ribbonStyle || ""
+				var ribbon = $('<div class="ribbon '+ribbonStyle+'"><div class="banner"><div class="text">'+ribbonText+'</div></div></div>')
+				ribbon.prependTo(element)
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Meteor</h2>
+				<p>A platform for development next gen web apps</p>
+			</section>
+			<section>
+				<h2>Next gen web?</h2>
+				<ul>
+					<li class="fragment">Single page browser apps</li>
+					<li class="fragment">Live and reactive (no page reloads)</li>
+					<li class="fragment">Latency compensated</li>
+					<li class="fragment">More desktop app like UI's</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Contemporary development model...</h2>
+				<ul>
+					<li class="fragment">Backend with rest API (rails, node, sinatra etc)</li>
+					<li class="fragment">Frontend JS app (angular, ember etc)</li>
+				</ul>
+			</section>
+			<section>
+				<div>
+					<h2>Is problematic...</h2>
+					<ul>
+						<li class="fragment">Most epic violation of DRY ever</li>
+						<li class="fragment">Unstability due to permutations and combinations</li>
+						<li class="fragment">Context switching (two dev environments, languages etc)</li>
+						<li class="fragment">Live & reactive tacked on (firebase etc)</li>
+						<li class="fragment">Fragmented deployment scenario</li>
+						<li class="fragment">Basically: No full stack solution</li>
+						<li class="fragment">Rails blew our minds is because it solved everything!</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2>Meteor to the rescue</h2>
+				<ul>
+					<li class="fragment">Complete platform (backend/frontend/database)</li>
+					<li class="fragment">Isomorphic JavaScript avoids duplication</li>
+					<li class="fragment">Reactive and latency compencated by default</li>
+					<li class="fragment">But wait, there's more...</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Pushing state of development</h2>
+				<blockquote>"Meteor is ten times more productive than previous web frameworks like Rails and Django"</blockquote>
+				<br>
+				<ul>
+					<li class="fragment">Built in user management</li>
+					<li class="fragment">Joy and productivity of schemaless (mongodb)</li>
+					<li class="fragment">Native package eco-system (atmosphere)</li>
+					<li class="fragment">Bootstrap supported as a convention</li>
+					<li class="fragment">Interactive console: Browser console</li>
+					<li class="fragment">Package configuration: Browser UI's</li>
+					<li class="fragment">Test autorunner: Browser UI (velocity)</li>
+					<li class="fragment">Auto reload on updates (hot code push)</li>
+					<li class="fragment">Built in deployment (meteor deploy)</li>
+					<li class="fragment">Build iOS/Android apps on the fly</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Demo</h2>
+				<p>Create a blog in 5 minutes</p>
+			</section>
+			<section>
+				<section>
+					<h2>Conclusion...</h2>
+				</section>
+				<section>
+					<h3>The good</h3>
+					<ul style="width: 742px">
+						<li>Awesome foundation</li>
+						<li>Already great package selection</li>
+						<li>Brings attention to UX rather than tech nerdery</li>
+						<li>The only next gen framework with developer happiness</li>
+					</ul>
+				</section>
+				<section>
+					<h3>The bad</h3>
+					<ul style="width: 742px">
+						<li>Lack of built in code generation</li>
+						<li>Fuzzy conventions</li>
+						<li>Lack of ODM (though foundation is in place)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>The ugly</h3>
+					<ul style="width: 742px">
+						<li>No Ruby...</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+
+	<script>
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			width: 1140,
+		  height: 900,
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+			// Parallax scrolling
+			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+			// parallaxBackgroundSize: '2100px 900px',
+
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			]
+		});
+	</script>
+</body>
+</html>

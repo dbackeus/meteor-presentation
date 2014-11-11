@@ -118,7 +118,7 @@ authorName: ->
 ```
 - Demonstrate problem with updating stuff
 
-# Secure updating with ownership
+## Secure updating with ownership
 
 - fix Post allow block
 
